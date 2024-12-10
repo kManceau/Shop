@@ -10,7 +10,7 @@ class Sale extends Model
     use HasFactory;
     protected $fillable = ['name', 'amount', 'start', 'end'];
 
-    protected function product():
+    protected function product()
     {
         return $this->hasMany(Product::class);
     }
