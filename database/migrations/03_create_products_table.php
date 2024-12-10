@@ -17,6 +17,7 @@ return new class extends Migration
             $table->text('description');
             $table->decimal('baseprice', 11, 2);
             $table->timestamps();
+            $table->foreignId('category_id')->constrained('categories');
         });
     }
 
