@@ -20,13 +20,18 @@ class Product extends Model
         return $this->belongsTo(Category::class);
     }
 
-    protected function order()
+    public function order()
     {
         return $this->hasMany(Order::class);
     }
 
-    protected function cart()
+    public function cart()
     {
         return $this->hasMany(Cart::class);
+    }
+
+    public function reviews()
+    {
+        return $this->hasMany(Review::class);
     }
 }
