@@ -16,7 +16,9 @@ class ProductSaleSeeder extends Seeder
     {
         $products = Product::all();
         foreach ($products as $product) {
-            $product->sales()->attach(rand(1, Sale::count()));
+            if($product->id % 2 === 0){
+                $product->sales()->attach(rand(1, Sale::count()));
+            }
         }
     }
 }
