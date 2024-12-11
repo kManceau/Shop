@@ -19,4 +19,14 @@ class Product extends Model
     {
         return $this->belongsTo(Category::class);
     }
+
+    protected function order()
+    {
+        return $this->hasMany(Order::class);
+    }
+
+    protected function cart()
+    {
+        return $this->hasMany(Cart::class);
+    }
 }
