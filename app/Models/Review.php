@@ -9,6 +9,7 @@ class Review extends Model
 {
     use HasFactory;
     protected $fillable = ['rating'];
+    public $timestamps = false;
 
     public function product()
     {

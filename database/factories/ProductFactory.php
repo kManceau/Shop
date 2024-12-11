@@ -19,10 +19,8 @@ class ProductFactory extends Factory
     {
         return [
             'name' => fake()->words(2, true),
-//            'description' => fake()->words(5),
             'description' => fake()->words(25, true),
             'baseprice' => fake()->randomFloat(2, 1, 100000000),
-//            'baseprice' => fake()->randomNumber(),
             'category_id' => rand(1, Category::count()),
         ];
     }
