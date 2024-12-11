@@ -46,12 +46,12 @@ class User extends Authenticatable
         ];
     }
 
-    protected function orders()
+    public function orders()
     {
         return $this->hasMany(Order::class);
     }
 
-    protected function products()
+    public function products()
     {
         return $this->hasMany(Product::class);
     }
