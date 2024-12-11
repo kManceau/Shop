@@ -9,6 +9,7 @@ class Sale extends Model
 {
     use HasFactory;
     protected $fillable = ['name', 'amount', 'start', 'end'];
+    public $timestamps = false;
 
     protected function product()
     {
