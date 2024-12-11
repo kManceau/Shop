@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('address', 255);
             $table->string('zipcode', 10);
             $table->string('city', 50);
+            $table->string('role', 5);
             $table->rememberToken();
             $table->timestamps();
         });
