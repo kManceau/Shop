@@ -10,12 +10,12 @@ class Order extends Model
     use HasFactory;
     protected $fillable = ['status'];
 
-    protected function product()
+    public function product()
     {
         return $this->hasMany(Product::class);
     }
 
-    protected function user()
+    public function user()
     {
         return $this->belongsTo(User::class);
     }
