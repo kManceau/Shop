@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
-            $table->integer('order_number');
+            $table->integer('order_number')->unique();
             $table->string('status', 10);
             $table->timestamps();
             $table->foreignId('user_id')->constrained('users');
